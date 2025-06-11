@@ -35,10 +35,13 @@ body {
 
 
 header {
+    position: relative;
+    top: 10vmin;
     background: radial-gradient(circle at center, var(--couleur-miclaire), var(--couleur-fonce));
     color: var(--couleur-claire);
     height: 25vh;
     padding: 1rem;
+
 
 
     display: flex;
@@ -49,19 +52,20 @@ header {
     
 }
 
-
-h1{
+h1 {
     font-family: "Police Titre";
     font-size: 5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
 }
 
 h3{
     font-size: 2rem;
 }
 
-
-
-/*Réglage de la partie nav*/
 
 #logo{
     width: 5%;
@@ -83,6 +87,7 @@ h3{
     text-align: center;
     border-radius: 5px;
 
+    transition: background-color 500ms, color 1000ms, border 1000ms;
 
 }
 
@@ -94,11 +99,17 @@ h3{
 }
 
 nav {
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-bottom: solid var(--couleur-fonce) 1px;
+
+    height: 10vmin;
+    width: 100vw;
+    background-color: var(--couleur-claire);
+    z-index: 10;
 }
 
 
@@ -106,21 +117,20 @@ nav {
     width: 80%;
     display: flex;
     flex-direction: row;
-    justify-content: end; 
-    align-items: center;
-    padding: 5px;
-
-
-}
-/*Réglage de la partie header*/
-header {
-    
+    justify-content: end;
+    font-family: "Police Titre";
+    font-size: 5rem;
 }
 
 
 
 
 /*Réglage de la partie main et aside*/
+
+p {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
 
 #rangement {
     width: 100vw;
@@ -129,20 +139,58 @@ header {
     justify-content: space-between;
     align-items: start;
     padding: 20px;
+
+    position: relative;
+    top: 10vmin;
 }
 
 main {
-    width: 75%;
+    width: 65%;
 }
 
 article {
     box-shadow: var(--couleur-fonce) 2px 2px 5px 0;
     padding: 10px;
     margin-bottom: 10px;
+    transition: transform 1000ms;
 }
 
+article:hover {
+    transform: translate3d(2vh, 2vh, 0);
+
+
+}
+
+/* Réglages article 1*/
+
+#texte1-contenant {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#texte1 {
+    width: 60%;
+    padding-left: 10px;
+}
+
+iframe {
+    display: block;
+    width: 40%;
+    border-radius: 20px;
+}
+
+
 aside {
-    width: 20%;
+    position: fixed;
+    top: 15vmin;
+    right: 0;
+    
+    width: 30%;
+    font-size: 1.1rem;
+
 }
 
 
@@ -153,12 +201,60 @@ aside {
 
 #lecture {
     max-width: 100%;
+    width: 40%;
+    float: right;
 }
 
 #prepa-num {
     max-width: 100%;
+    margin-top: 10px;
 }
 
 #fest-num {
     max-width: 100%;
+}
+
+aside>article {
+    padding: 15px;
+    background-color: var(--couleur-mifoncé);
+    color: var(--couleur-miclaire);
+    border: solid var(--couleur-fonce) 5px; 
+    border-radius: 15px;
+}
+
+
+/* Design de gue-din */
+
+
+.intertext {
+    width: 100%;
+    aspect-ratio: 1904/640;
+    background-image: url(../assets/bib2.png); 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: 10vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.it2 {
+     width: 100%;
+    aspect-ratio: 1904/640;
+    background-image: url(../assets/bib1.png);
+     background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position-y: 10vh;
+}
+
+
+h4 {
+    font-size: 4rem;
+    font-family: "Base";
+    color: white;
+    margin-right: 20%;
 }
