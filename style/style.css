@@ -75,6 +75,7 @@ h3{
 .nav-button {
     font-size: 1.5rem;
     text-decoration: none;
+    font-family: "Base";
     
     display: block;
     padding: 5px;
