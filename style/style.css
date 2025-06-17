@@ -259,3 +259,73 @@ h4 {
     color: white;
     margin-right: 20%;
 }
+
+
+
+
+/* La page game.htm */
+
+#main-game {
+    position: relative;
+    top: 10vmin;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    width: 100%;
+    padding: 25px;
+    
+    font-size: 1.5rem;
+}
+
+#user-interface {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#user-number {
+    font-size: 1.5rem;
+    width: 15vw;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#user-number:focus {
+    background-color: var(--couleur-fonce);
+    color: var(--couleur-miclaire);
+}
+
+#send-button {
+    display: block;
+    font-size: 1.5rem;
+
+    padding: 5px;
+    margin-left: 20px;
+
+    background-color: var(--couleur-miclaire);
+    border-radius: 10px;
+
+    box-shadow: var(--couleur-fonce) 3px 3px 5px 0;
+    transition: box-shadow 250ms, background-color 250ms;
+    border: none;
+}
+
+
+#send-button:hover {
+    background-color: white;
+    box-shadow: 0 0 0 0;
+}
+
+
+.result-line {
+    font-family: "Police Titre";
+    border: var(--couleur-fonce) solid 2px;
+    border-radius: 5px ;
+    font-size: 1.7rem;
+    margin: 10px;
+    
+}
