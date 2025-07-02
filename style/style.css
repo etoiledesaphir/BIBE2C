@@ -137,7 +137,7 @@ p {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: start;
     padding: 20px;
 
@@ -187,11 +187,13 @@ iframe {
 aside {
     position: fixed;
     top: 15vmin;
-    right: 0;
+    right: -33%;
+    transition : right 1500ms; 
     
     width: 30%;
     font-size: 1.1rem;
 
+    
 }
 
 
@@ -328,4 +330,49 @@ h4 {
     font-size: 1.7rem;
     margin: 10px;
     
+}
+
+
+/* Réglage JavaScript des News */
+
+#news-trigger {
+    position: fixed;
+    top: 30vh;
+    right : 0;
+    
+    background-color: var(--couleur-fonce);
+    color: var(--couleur-miclaire);
+
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+
+    padding: 10px;
+    
+    border-top: var(--couleur-mifoncé) solid 3px;
+    border-left: var(--couleur-mifoncé) solid 3px;
+    border-bottom: var(--couleur-mifoncé) solid 3px;
+    border-radius: 10px 0px 0px 10px;
+
+    z-index: 10;
+    cursor: pointer;
+
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+
+#close {
+    position: absolute;
+
+    right: 0;
+    top: -4.5vh;
+
+    padding: 3px;
+    background-color: var(--couleur-mifoncé);
+    color: var(--couleur-miclaire);
+    border: solid var(--couleur-fonce) 5px; 
+    border-radius: 10px;
+
+    font-weight: 900;
+    cursor : pointer;
 }
